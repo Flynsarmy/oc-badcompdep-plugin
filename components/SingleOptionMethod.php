@@ -3,13 +3,13 @@
 use Request;
 use Cms\Classes\ComponentBase;
 
-class BCDWithoutAJAX extends ComponentBase
+class SingleOptionMethod extends ComponentBase
 {
     public function componentDetails()
     {
         return [
-            'name'        => 'Without AJAX',
-            'description' => "Manual cat selection required, Post works as expected"
+            'name'        => 'Single Options Method',
+            'description' => "This component can't be set correctly and locks the UI."
         ];
     }
 
@@ -21,15 +21,20 @@ class BCDWithoutAJAX extends ComponentBase
                 'description' => 'The Category to display.',
                 'type'        => 'dropdown',
                 'required'    => true,
-                'options'     => ['foo' => 'Foo', 'bar' => 'Bar'],
             ],
             'post' => [
                 'title'       => 'Post',
                 'description' => 'The post to display.',
                 'type'        => 'dropdown',
                 'depends'     => ['category'],
+                'required'    => true,
             ],
         ];
+    }
+
+    public function getCategoryOptions()
+    {
+        return ['foo' => 'Foo'];
     }
 
     public function getPostOptions()

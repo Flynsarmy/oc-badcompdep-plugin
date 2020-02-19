@@ -17,8 +17,9 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Flynsarmy\Badcompdep\Components\BCDWithoutAJAX' => 'bcdWithoutAJAX',
-            'Flynsarmy\Badcompdep\Components\BCDWithAJAX'    => 'bcdWithAJAX',
+            'Flynsarmy\Badcompdep\Components\OptionsMethod' => 'bcdOptionsMethod',
+            'Flynsarmy\Badcompdep\Components\SingleOptionMethod' => 'bcdSingleOptionMethod',
+            'Flynsarmy\Badcompdep\Components\OptionsArray'    => 'bcdOptionsArray',
         ];
     }
 }

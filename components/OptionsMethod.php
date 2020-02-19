@@ -3,12 +3,12 @@
 use Request;
 use Cms\Classes\ComponentBase;
 
-class BCDWithAJAX extends ComponentBase
+class OptionsMethod extends ComponentBase
 {
     public function componentDetails()
     {
         return [
-            'name'        => 'With AJAX',
+            'name'        => 'Options Method',
             'description' => "Cat selected by default but Post can't see it"
         ];
     }
